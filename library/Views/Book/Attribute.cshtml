@@ -1,0 +1,20 @@
+﻿@using library.Models;
+@{
+    ViewBag.Title = "Genre";
+}
+<div class="containerTitAtr">
+    <div class="title-container">
+        @ViewBag.str
+    </div>
+    </div>
+
+
+    @foreach (string attribute in @ViewBag.attribute)
+            {
+        <a class="containermy" href="@("/Book/List?attribute="+@attribute+"&id="+@ViewBag.id)">
+            <div class="list-container">
+                @attribute
+                @*@Html.ActionLink(@attribute, "List", new { attribute = @attribute, id = @ViewBag.id }, null)*@
+            </div>
+            </a>
+            }

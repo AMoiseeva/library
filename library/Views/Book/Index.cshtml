@@ -1,0 +1,35 @@
+﻿@using library.Models;
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<a class="containermy" href="@("/Book/Attribute?id=1")">
+    <div class="attribute-container">
+        Жанры
+        @*@Html.ActionLink("Жанры", "Attribute", new { id = 1 }, null)*@
+    </div>
+</a>
+
+<a class="containermy" href="@("/Book/Attribute?id=0")">
+    <div class="attribute-container">
+        Авторы
+        @*@Html.ActionLink("Авторы", "Attribute", new { id = 0 }, null)*@
+    </div>
+</a>
+
+<div class="containerTitBook">
+    <div class="title-container">Книжки</div>
+    </div>
+
+
+    @foreach (Book book in ViewBag.Books)
+    {
+        <a class="Book-container" href="@("/Book/Page?bookId=" + book.Id)">
+            <div class="bookname-container">
+                @book.Name
+                @*@Html.ActionLink(@book.Name, "Page", new { bookId = @book.Id }, null)*@
+            </div>
+            <div class="author-container">@book.Author</div>
+        </a>
+    }

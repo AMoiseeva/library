@@ -1,0 +1,102 @@
+﻿.Book-container{
+    border: 1px solid black;
+    margin-bottom: 10px;
+    background: #cf9a65;
+    border-radius: 10px;
+    display: block;
+    padding: 10px;
+}
+
+.Book-container:hover{
+    background: #e3a17b;
+    text-decoration: none;
+}
+
+.attribute-container{
+    font-size: 22px;
+    font-weight: bold;
+    font: 600;
+    color: #221F0B;
+}
+
+.bookname-container{
+    font-size: 18px;
+    font-weight: bold;
+    color: #4d271d;
+}
+
+.author-container{
+    font-size: 14px;
+    color: #4d271d;
+}
+.containerTit{
+    margin: 10px auto;
+    width:320px;
+    margin-bottom: 10px;
+    background: #f0c5a5;
+    border-radius: 10px;
+    padding: 10px;
+    position:center;
+}
+
+.containerTitAtr{
+    margin: 10px auto;
+    width:140px;
+    margin-bottom: 10px;
+    background: #f0c5a5;
+    border-radius: 10px;
+    padding: 10px;
+    position:center;
+}
+
+.containerTitBook{
+    margin: 10px auto;
+    width:130px;
+    margin-bottom: 10px;
+    background: #f0c5a5;
+    border-radius: 10px;
+    padding: 10px;
+    position:center;
+}
+
+.containermy{
+    border: 1px solid black;
+    margin-bottom: 10px;
+    background: #b05d41;
+    border-radius: 10px;
+    display: block;
+    padding: 10px;
+}
+
+.containermy:hover{
+    background: #cc8e62;
+    text-decoration: none;
+}
+
+.title-container{
+    background-position:center;
+    font-size: 30px;
+    font-weight:bold;
+    color: #221F0B;
+    position:center;
+}
+
+.list-container{
+    font-size: 16px;
+    font-weight: bold;
+    color: #221F0B;
+}
+
+.comm-container{
+    border: 1px solid black;
+    margin-bottom: 10px;
+    background: #f2c5a5;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.comment{
+    font-size: 14px;
+    color: #7A5429;
+}
+

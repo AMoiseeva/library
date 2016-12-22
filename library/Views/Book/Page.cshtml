@@ -1,0 +1,39 @@
+﻿@using library.Models;
+@{
+    ViewBag.Title = "Page";
+}
+
+<div>
+
+    <div class="comm-container">
+
+        <div class="title-container">@ViewBag.book.Name</div>
+        <div class="bookname-container">@ViewBag.book.Author</div>
+        <div>@ViewBag.book.Genre </div>
+        <div>Описание: @ViewBag.book.Discription </div>
+
+        @foreach (var link in ViewBag.links)
+        {
+                string name = "Скачать в формате " + link.Format.ToString();
+            <div>
+                @Html.ActionLink(@name, "LoadingBook", new { metaId = link.Id }, null)
+            </div>
+        }
+        <h3>Комментарии:</h3>
+        @foreach (var comm in @ViewBag.comments)
+            {
+            <div class="comment">
+                @comm.Text
+            </div>
+        }
+        @using (Html.BeginForm("AddComment", "Book", FormMethod.Post))
+        {
+
+            @Html.TextArea("comm", "Введите Ваш комментарий", 5, 100, null)
+            var BookId = ViewBag.book.Id;
+            <input type="hidden" value="@BookId" name="bookId" />
+            <input type="submit" value="Отправить" />
+        }
+    </div>
+</div>
+
